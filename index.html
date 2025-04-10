@@ -18,11 +18,27 @@
 
         h1 {
             text-align: center; /* Judul pertama rata tengah */
-            font-size: 3em;
+            font-size: 3em; /* Ukuran besar untuk judul pertama */
             margin-top: 30px;
             overflow: hidden; /* Agar teks tersembunyi sebelum animasi */
             white-space: nowrap; /* Agar teks tetap dalam satu baris */
             animation: typing 3s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite; /* Animasi mengetik */
+        }
+
+        h2, h3 {
+            font-size: 2em; /* Ukuran lebih kecil dari h1 tapi lebih besar dari p */
+            text-align: left; /* Rata kiri untuk subjudul */
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 1em; /* Ukuran font normal untuk paragraf */
+            text-align: left; /* Rata kiri untuk paragraf */
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            margin: 10px 0;
         }
 
         @keyframes typing {
@@ -40,22 +56,10 @@
             }
         }
 
-        h2, h3, p {
-            margin: 10px;
-            text-align: left; /* Rata kiri untuk judul selain h1 dan teks lainnya */
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
         .container {
             width: 100%; /* Tidak ada batas di kanan dan kiri */
             margin: 0 auto;
             padding: 20px;
-        }
-
-        h2 {
-            font-size: 2em;
-            margin-top: 30px;
         }
 
         .cta {
@@ -103,102 +107,107 @@
             width: 2px;
             height: 2px;
             background-color: white;
-            animation: falling-stars 5s infinite;
-            animation-timing-function: linear;
-            z-index: -1; /* Agar bintang tidak menutupi teks */
+            animation: falling-stars 2s linear infinite;
+            animation-delay: random;
         }
 
-        /* Penataan untuk gambar */
-        .server-image {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-top: 20px;
+        .falling-star:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
         }
-
-        /* Kelas untuk menunjukkan elemen setelah mengetik selesai */
-        .show-content {
-            opacity: 1;
+        .falling-star:nth-child(2) {
+            left: 20%;
+            animation-delay: 1s;
+        }
+        .falling-star:nth-child(3) {
+            left: 30%;
+            animation-delay: 2s;
+        }
+        .falling-star:nth-child(4) {
+            left: 40%;
+            animation-delay: 3s;
+        }
+        .falling-star:nth-child(5) {
+            left: 50%;
+            animation-delay: 4s;
+        }
+        .falling-star:nth-child(6) {
+            left: 60%;
+            animation-delay: 5s;
+        }
+        .falling-star:nth-child(7) {
+            left: 70%;
+            animation-delay: 6s;
+        }
+        .falling-star:nth-child(8) {
+            left: 80%;
+            animation-delay: 7s;
+        }
+        .falling-star:nth-child(9) {
+            left: 90%;
+            animation-delay: 8s;
         }
 
     </style>
 </head>
 <body>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+
     <div class="container">
-        <h1 id="typing-title">Jasa Pembuatan Server Discord</h1>
-        <p id="sub-heading">Tetsoe lagi buka jasa nih!</p>
-        <p id="content1">Jika Kamu membutuhkan pembuatan server Discord yang efisien, jasa ini adalah pilihan yang tepat. Saya siap membantu Kamu membuat server Discord yang terkelola dengan baik dan sesuai dengan kebutuhan komunitas Kamu. Silakan hubungi saya untuk konsultasi lebih lanjut.</p>
+        <h1 id="judul-pertama">Jasa Discord</h1>
 
-        <h2 id="section1">Apa yang Saya Tawarkan</h2>
-        <ul class="bullet-list">
-            <li><strong>Server Discord yang Dibuat dengan Baik:</strong> Mendapatkan server Discord yang rapi, terstruktur dengan baik, dan mudah dikelola.</li>
-            <li><strong>Pengaturan Roles dan Permissions yang Tepat:</strong> Semua anggota server akan mendapatkan akses sesuai dengan peran mereka.</li>
-            <li><strong>Automasi dan Bot yang Efisien:</strong> Bot yang digunakan untuk moderasi dan tugas otomatis akan membantu meringankan pekerjaan Kamu.</li>
-            <li><strong>Server yang Mudah Dinavigasi:</strong> Menyusun server agar mudah dinavigasi oleh anggota, dengan pengaturan channel yang jelas dan memudahkan komunikasi.</li>
-        </ul>
+        <div class="content">
+            <h2>Apa yang Saya Tawarkan</h2>
+            <ul class="bullet-list">
+                <li><strong>Server Discord yang Dibuat dengan Baik:</strong> Mendapatkan server Discord yang rapi, terstruktur dengan baik, dan mudah dikelola.</li>
+                <li><strong>Pengaturan Roles dan Permissions yang Tepat:</strong> Semua anggota server akan mendapatkan akses sesuai dengan peran mereka.</li>
+                <li><strong>Automasi dan Bot yang Efisien:</strong> Bot yang digunakan untuk moderasi dan tugas otomatis akan membantu meringankan pekerjaan Kamu.</li>
+                <li><strong>Server yang Mudah Dinavigasi:</strong> Menyusun server agar mudah dinavigasi oleh anggota, dengan pengaturan channel yang jelas dan memudahkan komunikasi.</li>
+            </ul>
 
-        <h2 id="section2">Kenapa Harus Memilih Jasa Tetsoe?</h2>
-        <ul class="bullet-list">
-            <li><strong>Pengalaman yang Luas:</strong> Saya memiliki pengalaman lebih dari beberapa tahun dalam mengelola server Discord, baik dalam pembuatan server baru, maupun optimasi server yang sudah ada.</li>
-            <li><strong>Perbaikan Server Gratis:</strong> Saya menyediakan perbaikan server Discord secara gratis, termasuk penyempurnaan pengaturan, pembuatan channel baru, dan meningkatkan pengalaman pengguna tanpa perlu biaya.</li>
-            <li><strong>Revisi Tanpa Batas:</strong> Saya memberikan revisi tanpa batas untuk memastikan server Kamu sesuai dengan keinginan dan kebutuhan komunitas. Setiap perubahan dapat dilakukan tanpa ada batasan waktu.</li>
-        </ul>
+            <h2>Kenapa Harus Memilih Jasa Tetsoe?</h2>
+            <ul class="bullet-list">
+                <li><strong>Pengalaman yang Luas:</strong> Saya memiliki pengalaman lebih dari beberapa tahun dalam mengelola server Discord, baik dalam pembuatan server baru, maupun optimasi server yang sudah ada.</li>
+                <li><strong>Perbaikan Server Gratis:</strong> Saya menyediakan perbaikan server Discord secara gratis, termasuk penyempurnaan pengaturan, pembuatan channel baru, dan meningkatkan pengalaman pengguna tanpa perlu biaya.</li>
+                <li><strong>Revisi Tanpa Batas:</strong> Saya memberikan revisi tanpa batas untuk memastikan server Kamu sesuai dengan keinginan dan kebutuhan komunitas. Setiap perubahan dapat dilakukan tanpa ada batasan waktu.</li>
+            </ul>
 
-        <h2 id="motto">Moto Saya</h2>
-        <p>"Saya tidak pernah meragukan pelanggan, meski permintaannya aneh-aneh, selagi saya bisa dan mampu, akan saya lakukan."</p>
-
-        <h2 id="skills">Keahlian Saya:</h2>
-        <ul class="bullet-list">
-            <li><strong>Pembuatan dan Pengelolaan Server Discord:</strong> Merancang dan membangun server Discord dari awal sesuai dengan kebutuhan dan tujuan komunitas, serta penyesuaian lanjutan untuk meningkatkan keterlibatan dan efisiensi.</li>
-            <li><strong>Pengelolaan Roles & Permissions:</strong> Menentukan peran dan izin yang tepat untuk anggota komunitas, memastikan bahwa sistem berjalan dengan lancar dan aman bagi setiap pengguna.</li>
-            <li><strong>Automasi & Integrasi Bot:</strong> Menyiapkan sistem automasi menggunakan bot dan API untuk meningkatkan pengelolaan server dan memberikan pengalaman pengguna yang lebih baik, serta mengurangi pekerjaan manual.</li>
-            <li><strong>Custom Bot Discord:</strong> Meskipun sudah tidak aktif membuatnya, saya memiliki pengalaman dalam pembuatan custom bot Discord yang dapat membantu dalam moderasi, automasi tugas, dan penyesuaian fungsi server sesuai kebutuhan komunitas.</li>
-        </ul>
-
-        <h2 id="experience">Pengalaman Saya</h2>
-        <p>Saya juga memiliki pengalaman dalam mengelola server Discord untuk berbagai komunitas kecil maupun besar, termasuk pengalaman sebagai moderator di berbagai server, seperti server dengan lebih dari 10 ribu anggota. Selain itu, saya juga pernah menjadi staff di berbagai server Discord, yang memperkaya pemahaman saya tentang koordinasi dan pengelolaan tim, serta memperbaiki kinerja server komunitas. Dengan pengalaman tersebut, saya memahami pentingnya perencanaan yang baik, kenyamanan server, serta optimasi pengelolaan server untuk keberlanjutan komunitas.</p>
-
-        <h2>Contoh Server Discord</h2>
-        <img src="server-example1.jpg" alt="Contoh Server 1" class="server-image">
-        <img src="server-example2.jpg" alt="Contoh Server 2" class="server-image">
-        <img src="server-example3.jpg" alt="Contoh Server 3" class="server-image">
-
-        <h2>Harga</h2>
-        <p><strong>Free</strong></p>
-        <p>Tetsoe membuka jasa secara gratis selama proses tidak terikat pada persyaratan khusus. Tetap bekerja secara fleksibel, tanpa kewajiban pembayaran.</p>
-
-        <section class="contact">
-            <h2>Hubungi Saya</h2>
             <p>Jika Kamu membutuhkan bantuan dalam pembuatan server Discord, optimasi server, atau setup bots, saya siap membantu! Jangan ragu untuk menghubungi saya dan kita bisa diskusikan kebutuhan server komunitas Kamu lebih lanjut.</p>
+
             <div class="contact-buttons">
-                <a href="mailto:tetsoe@email.com" class="cta">Hubungi via Email</a>
-                <a href="https://discord.com/users/discord-id" class="cta" target="_blank">Hubungi via Discord</a>
+                <a href="mailto:email@example.com" class="cta">Hubungi via Email</a>
+                <a href="https://discord.com/users/123456789" class="cta">Hubungi via Discord</a>
             </div>
-        </section>
+        </div>
     </div>
 
-    <!-- Efek Bintang Jatuh -->
     <script>
-        // Membuat efek bintang jatuh di seluruh layar
-        for (let i = 0; i < 100; i++) {
-            let star = document.createElement('div');
-            star.classList.add('falling-star');
-            star.style.left = `${Math.random() * 100}vw`; // Muncul di seluruh layar
-            star.style.animationDuration = `${Math.random() * 3 + 3}s`; // Kecepatan jatuh acak
-            star.style.animationDelay = `${Math.random() * 5}s`; // Menunda agar efek terlihat acak
-            document.body.appendChild(star);
-        }
-
-        // Fungsi untuk memunculkan konten setelah animasi mengetik selesai
-        window.onload = function () {
-            setTimeout(function () {
-                // Menambahkan kelas 'show-content' ke seluruh konten setelah efek mengetik selesai
-                let elements = document.querySelectorAll('h1, p, h2, ul, .cta');
-                elements.forEach(function (el) {
-                    el.classList.add('show-content');
-                });
-            }, 4000); // Delay 4 detik setelah judul selesai
-        };
+        document.addEventListener("DOMContentLoaded", function() {
+            const typingElement = document.getElementById("judul-pertama");
+            const text = typingElement.textContent;
+            typingElement.textContent = '';
+            
+            let index = 0;
+            let interval = setInterval(function() {
+                typingElement.textContent += text[index];
+                index++;
+                if (index === text.length) {
+                    clearInterval(interval);
+                    // Setelah mengetik selesai, tampilkan seluruh konten
+                    document.querySelectorAll('h2, h3, p').forEach(function(element) {
+                        element.style.opacity = 1; // Menampilkan konten
+                    });
+                }
+            }, 100); // Waktu antar karakter
+        });
     </script>
 </body>
 </html>
