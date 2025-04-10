@@ -1,175 +1,182 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jasa Pembuatan Server Discord</title>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      position: relative;
-      overflow-x: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Pembuatan Server Discord</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
 
-    h1 {
-      text-align: center;
-      font-size: 3em;
-      margin-top: 30px;
-    }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-top: 30px;
+            white-space: nowrap;
+        }
 
-    h3, p {
-      font-size: 1.2em;
-      text-align: left;
-      margin: 10px 0;
-    }
+        h3 {
+            font-size: 1.2em;
+            text-align: left;
+            margin: 10px 0;
+        }
 
-    .container {
-      width: 100%;
-      margin: 0 auto;
-      padding: 20px;
-    }
+        p {
+            font-size: 1em;
+            text-align: left;
+            margin: 10px 0;
+        }
 
-    .cta {
-      display: inline-block;
-      padding: 15px 30px;
-      margin: 10px;
-      text-decoration: none;
-      background-color: #003366;
-      color: white;
-      font-size: 1.2em;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    .cta:hover {
-      background-color: #005599;
-    }
+        .cta {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            text-decoration: none;
+            background-color: #003366;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
 
-    .contact {
-      text-align: left;
-      margin-top: 50px;
-    }
+        .cta:hover {
+            background-color: #005599;
+        }
 
-    .contact-buttons {
-      margin-top: 20px;
-    }
+        .contact {
+            text-align: left;
+            margin-top: 50px;
+        }
 
-    .bullet-list {
-      list-style-type: disc;
-      margin-left: 30px;
-    }
+        .contact-buttons {
+            margin-top: 20px;
+        }
 
-    .bullet-list li {
-      margin-bottom: 10px;
-    }
+        .bullet-list {
+            list-style-type: disc;
+            margin-left: 30px;
+        }
 
-    @keyframes falling-stars {
-      0% { top: -10px; opacity: 0.5; }
-      100% { top: 100vh; opacity: 0; }
-    }
+        .bullet-list li {
+            margin-bottom: 10px;
+        }
 
-    .falling-star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background-color: white;
-      animation: falling-stars 2s linear infinite;
-    }
+        @keyframes falling-stars {
+            0% { top: -10px; opacity: 0.5; }
+            100% { top: 100vh; opacity: 0; }
+        }
 
-    .falling-star:nth-child(1) { left: 10%; animation-delay: 0s; }
-    .falling-star:nth-child(2) { left: 20%; animation-delay: 1s; }
-    .falling-star:nth-child(3) { left: 30%; animation-delay: 2s; }
-    .falling-star:nth-child(4) { left: 40%; animation-delay: 3s; }
-    .falling-star:nth-child(5) { left: 50%; animation-delay: 4s; }
-    .falling-star:nth-child(6) { left: 60%; animation-delay: 5s; }
-    .falling-star:nth-child(7) { left: 70%; animation-delay: 6s; }
-    .falling-star:nth-child(8) { left: 80%; animation-delay: 7s; }
-    .falling-star:nth-child(9) { left: 90%; animation-delay: 8s; }
+        .falling-star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: white;
+            animation: falling-stars 2s linear infinite;
+        }
 
-    .example-images {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
+        .falling-star:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .falling-star:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .falling-star:nth-child(3) { left: 30%; animation-delay: 2s; }
+        .falling-star:nth-child(4) { left: 40%; animation-delay: 3s; }
+        .falling-star:nth-child(5) { left: 50%; animation-delay: 4s; }
+        .falling-star:nth-child(6) { left: 60%; animation-delay: 5s; }
+        .falling-star:nth-child(7) { left: 70%; animation-delay: 6s; }
+        .falling-star:nth-child(8) { left: 80%; animation-delay: 7s; }
+        .falling-star:nth-child(9) { left: 90%; animation-delay: 8s; }
 
-    .example-images img {
-      width: 30%;
-      height: auto;
-      border-radius: 8px;
-      margin: 10px;
-    }
-  </style>
+        .example-images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .example-images img {
+            width: 30%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-  <div class="falling-star"></div>
-  <div class="falling-star"></div>
-  <div class="falling-star"></div>
-  <div class="falling-star"></div>
-  <div class="falling-star"></div>
-  <div class="falling-star"></div>
-  <div class="falling-star"></div>
-  <div class="falling-star"></div>
-  <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
+    <div class="falling-star"></div>
 
-  <div class="container">
-    <h1 id="judul-pertama">Jasa Discord</h1>
+    <div class="container">
+        <h1 id="judul-pertama">Jasa Discord</h1>
 
-    <div class="content">
-      <h3 id="apa-yang-saya-tawarkan">Apa yang Saya Tawarkan</h3>
-      <ul class="bullet-list" id="bullet-list">
-        <li><strong>Server Discord yang Dibuat dengan Baik:</strong> Mendapatkan server Discord yang rapi, terstruktur dengan baik, dan mudah dikelola.</li>
-        <li><strong>Pengaturan Roles dan Permissions yang Tepat:</strong> Semua anggota server akan mendapatkan akses sesuai dengan peran mereka.</li>
-        <li><strong>Automasi dan Bot yang Efisien:</strong> Bot yang digunakan untuk moderasi dan tugas otomatis akan membantu meringankan pekerjaan Kamu.</li>
-        <li><strong>Server yang Mudah Dinavigasi:</strong> Menyusun server agar mudah dinavigasi oleh anggota, dengan pengaturan channel yang jelas dan memudahkan komunikasi.</li>
-      </ul>
+        <div class="content">
+            <h3 id="apa-yang-saya-tawarkan">Apa yang Saya Tawarkan</h3>
+            <ul class="bullet-list" id="bullet-list">
+                <li><strong>Server Discord yang Dibuat dengan Baik:</strong> Mendapatkan server Discord yang rapi, terstruktur dengan baik, dan mudah dikelola.</li>
+                <li><strong>Pengaturan Roles dan Permissions yang Tepat:</strong> Semua anggota server akan mendapatkan akses sesuai dengan peran mereka.</li>
+                <li><strong>Automasi dan Bot yang Efisien:</strong> Bot yang digunakan untuk moderasi dan tugas otomatis akan membantu meringankan pekerjaan Kamu.</li>
+                <li><strong>Server yang Mudah Dinavigasi:</strong> Menyusun server agar mudah dinavigasi oleh anggota, dengan pengaturan channel yang jelas dan memudahkan komunikasi.</li>
+            </ul>
 
-      <h3 id="kenapa-pilih">Kenapa Harus Memilih Jasa Tetsoe?</h3>
-      <ul class="bullet-list" id="kenapa-list">
-        <li><strong>Pengalaman yang Luas:</strong> Saya memiliki pengalaman lebih dari beberapa tahun dalam mengelola server Discord, baik dalam pembuatan server baru, maupun optimasi server yang sudah ada.</li>
-        <li><strong>Perbaikan Server Gratis:</strong> Saya menyediakan perbaikan server Discord secara gratis, termasuk penyempurnaan pengaturan, pembuatan channel baru, dan meningkatkan pengalaman pengguna tanpa perlu biaya.</li>
-        <li><strong>Revisi Tanpa Batas:</strong> Saya memberikan revisi tanpa batas untuk memastikan server Kamu sesuai dengan keinginan dan kebutuhan komunitas. Setiap perubahan dapat dilakukan tanpa ada batasan waktu.</li>
-      </ul>
+            <h3 id="kenapa-pilih">Kenapa Harus Memilih Jasa Tetsoe?</h3>
+            <ul class="bullet-list" id="kenapa-list">
+                <li><strong>Pengalaman yang Luas:</strong> Saya memiliki pengalaman lebih dari beberapa tahun dalam mengelola server Discord, baik dalam pembuatan server baru, maupun optimasi server yang sudah ada.</li>
+                <li><strong>Perbaikan Server Gratis:</strong> Saya menyediakan perbaikan server Discord secara gratis, termasuk penyempurnaan pengaturan, pembuatan channel baru, dan meningkatkan pengalaman pengguna tanpa perlu biaya.</li>
+                <li><strong>Revisi Tanpa Batas:</strong> Saya memberikan revisi tanpa batas untuk memastikan server Kamu sesuai dengan keinginan dan kebutuhan komunitas. Setiap perubahan dapat dilakukan tanpa ada batasan waktu.</li>
+            </ul>
 
-      <h3 id="moto">Moto Saya</h3>
-      <p id="moto-text">"Saya tidak pernah meragukan pelanggan, meski permintaannya aneh-aneh, selagi saya bisa dan mampu, akan saya lakukan."</p>
+            <h3 id="moto">Moto Saya</h3>
+            <p id="moto-text">"Saya tidak pernah meragukan pelanggan, meski permintaannya aneh-aneh, selagi saya bisa dan mampu, akan saya lakukan."</p>
 
-      <h3 id="keahlian">Keahlian Saya</h3>
-      <ul class="bullet-list" id="keahlian-list">
-        <li><strong>Pembuatan dan Pengelolaan Server Discord:</strong> Merancang dan membangun server Discord dari awal sesuai dengan kebutuhan dan tujuan komunitas kamu.</li>
-        <li><strong>Pengelolaan Roles & Permissions:</strong> Menyusun roles dan permissions yang tepat, memastikan sistem berjalan lancar dan aman.</li>
-        <li><strong>Automasi & Integrasi Bot:</strong> Mengintegrasikan bot untuk mengotomatisasi tugas-tugas dan meningkatkan pengalaman pengguna.</li>
-        <li><strong>Custom Bot Discord:</strong> Meski kini tidak aktif membuatnya, saya punya pengalaman dalam membuat custom bot untuk moderasi, automasi, dan penyesuaian fungsi server.</li>
-      </ul>
+            <h3 id="keahlian">Keahlian Saya</h3>
+            <ul class="bullet-list" id="keahlian-list">
+                <li><strong>Pembuatan dan Pengelolaan Server Discord:</strong> Merancang dan membangun server Discord dari awal sesuai dengan kebutuhan dan tujuan komunitas kamu.</li>
+                <li><strong>Pengelolaan Roles & Permissions:</strong> Menyusun roles dan permissions yang tepat, memastikan sistem berjalan lancar dan aman.</li>
+                <li><strong>Automasi & Integrasi Bot:</strong> Mengintegrasikan bot untuk mengotomatisasi tugas-tugas dan meningkatkan pengalaman pengguna.</li>
+                <li><strong>Custom Bot Discord:</strong> Meski kini tidak aktif membuatnya, saya punya pengalaman dalam membuat custom bot untuk moderasi, automasi, dan penyesuaian fungsi server.</li>
+            </ul>
 
-      <h3 id="pengalaman">Pengalaman Saya</h3>
-      <p id="pengalaman-text">Saya telah mengelola server Discord untuk berbagai komunitas besar dan kecil, termasuk server dengan lebih dari 10 ribu anggota. Selain itu, saya juga berpengalaman sebagai moderator dan staf di berbagai server, sehingga memahami betul pentingnya perencanaan yang baik dan pengelolaan server yang optimal.</p>
+            <h3 id="pengalaman">Pengalaman Saya</h3>
+            <p id="pengalaman-text">Saya telah mengelola server Discord untuk berbagai komunitas besar dan kecil, termasuk server dengan lebih dari 10 ribu anggota. Selain itu, saya juga berpengalaman sebagai moderator dan staf di berbagai server, sehingga memahami betul pentingnya perencanaan yang baik dan pengelolaan server yang optimal.</p>
 
-      <h3 id="contoh">Contoh Server Discord</h3>
-      <p id="contoh-text">Jika kamu ingin melihat contoh server yang telah saya buat dan kelola, silakan hubungi saya.</p>
+            <h3 id="contoh">Contoh Server Discord</h3>
+            <p id="contoh-text">Jika kamu ingin melihat contoh server yang telah saya buat dan kelola, silakan hubungi saya.</p>
 
-      <div class="example-images" id="gambar-contoh">
-        <img src="https://via.placeholder.com/300x150?text=Server+Discord+1" alt="Contoh Server Discord 1">
-        <img src="https://via.placeholder.com/300x150?text=Server+Discord+2" alt="Contoh Server Discord 2">
-        <img src="https://via.placeholder.com/300x150?text=Server+Discord+3" alt="Contoh Server Discord 3">
-      </div>
+            <div class="example-images" id="gambar-contoh">
+                <img src="https://via.placeholder.com/300x150?text=Server+Discord+1" alt="Contoh Server Discord 1">
+                <img src="https://via.placeholder.com/300x150?text=Server+Discord+2" alt="Contoh Server Discord 2">
+                <img src="https://via.placeholder.com/300x150?text=Server+Discord+3" alt="Contoh Server Discord 3">
+            </div>
 
-      <h3 id="harga">Harga</h3>
-      <p id="harga-text">Gratis! Saya menawarkan jasa secara gratis selama tidak ada persyaratan khusus dan masih dalam kondisi fleksibel. Tidak ada kewajiban pembayaran.</p>
+            <h3 id="harga">Harga</h3>
+            <p id="harga-text">Gratis! Saya menawarkan jasa secara gratis selama tidak ada persyaratan khusus dan masih dalam kondisi fleksibel. Tidak ada kewajiban pembayaran.</p>
 
-      <h3 id="hubungi">Hubungi Saya</h3>
-      <p id="hubungi-text">Jika kamu membutuhkan bantuan dalam pembuatan server Discord, optimasi server, atau setup bots, saya siap membantu! Jangan ragu untuk menghubungi saya, dan kita bisa diskusikan lebih lanjut mengenai kebutuhan server komunitas kamu.</p>
+            <h3 id="hubungi">Hubungi Saya</h3>
+            <p id="hubungi-text">Jika kamu membutuhkan bantuan dalam pembuatan server Discord, optimasi server, atau setup bots, saya siap membantu! Jangan ragu untuk menghubungi saya, dan kita bisa diskusikan lebih lanjut mengenai kebutuhan server komunitas kamu.</p>
 
-      <div class="contact-buttons">
-        <a href="mailto:email@example.com" class="cta">Hubungi via Email</a>
-        <a href="https://discord.com/users/123456789" class="cta">Hubungi via Discord</a>
-      </div>
+            <div class="contact-buttons">
+                <a href="mailto:email@example.com" class="cta">Hubungi via Email</a>
+                <a href="https://discord.com/users/123456789" class="cta">Hubungi via Discord</a>
+            </div>
+        </div>
     </div>
-  </div>
 </body>
 </html>
