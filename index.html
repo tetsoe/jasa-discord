@@ -20,40 +20,12 @@
             text-align: center;
             font-size: 3em;
             margin-top: 30px;
-            overflow: hidden;
-            white-space: nowrap;
-            animation: typing 3s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite;
         }
 
-        h3 {
-            font-size: 2em;
+        h3, p {
+            font-size: 1.2em;
             text-align: left;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
             margin: 10px 0;
-        }
-
-        p {
-            font-size: 1em;
-            text-align: left;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            margin: 10px 0;
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink-caret {
-            50% {
-                border-color: transparent;
-            }
         }
 
         .container {
@@ -107,45 +79,17 @@
             height: 2px;
             background-color: white;
             animation: falling-stars 2s linear infinite;
-            animation-delay: random;
         }
 
-        .falling-star:nth-child(1) {
-            left: 10%;
-            animation-delay: 0s;
-        }
-        .falling-star:nth-child(2) {
-            left: 20%;
-            animation-delay: 1s;
-        }
-        .falling-star:nth-child(3) {
-            left: 30%;
-            animation-delay: 2s;
-        }
-        .falling-star:nth-child(4) {
-            left: 40%;
-            animation-delay: 3s;
-        }
-        .falling-star:nth-child(5) {
-            left: 50%;
-            animation-delay: 4s;
-        }
-        .falling-star:nth-child(6) {
-            left: 60%;
-            animation-delay: 5s;
-        }
-        .falling-star:nth-child(7) {
-            left: 70%;
-            animation-delay: 6s;
-        }
-        .falling-star:nth-child(8) {
-            left: 80%;
-            animation-delay: 7s;
-        }
-        .falling-star:nth-child(9) {
-            left: 90%;
-            animation-delay: 8s;
-        }
+        .falling-star:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .falling-star:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .falling-star:nth-child(3) { left: 30%; animation-delay: 2s; }
+        .falling-star:nth-child(4) { left: 40%; animation-delay: 3s; }
+        .falling-star:nth-child(5) { left: 50%; animation-delay: 4s; }
+        .falling-star:nth-child(6) { left: 60%; animation-delay: 5s; }
+        .falling-star:nth-child(7) { left: 70%; animation-delay: 6s; }
+        .falling-star:nth-child(8) { left: 80%; animation-delay: 7s; }
+        .falling-star:nth-child(9) { left: 90%; animation-delay: 8s; }
 
         .example-images {
             display: flex;
@@ -177,76 +121,55 @@
         <h1 id="judul-pertama">Jasa Discord</h1>
 
         <div class="content">
-            <h3 id="apa-yang-saya-tawarkan" style="opacity: 0;">Apa yang Saya Tawarkan</h3>
-            <ul class="bullet-list" id="bullet-list" style="opacity: 0;">
+            <h3 id="apa-yang-saya-tawarkan">Apa yang Saya Tawarkan</h3>
+            <ul class="bullet-list" id="bullet-list">
                 <li><strong>Server Discord yang Dibuat dengan Baik:</strong> Mendapatkan server Discord yang rapi, terstruktur dengan baik, dan mudah dikelola.</li>
                 <li><strong>Pengaturan Roles dan Permissions yang Tepat:</strong> Semua anggota server akan mendapatkan akses sesuai dengan peran mereka.</li>
                 <li><strong>Automasi dan Bot yang Efisien:</strong> Bot yang digunakan untuk moderasi dan tugas otomatis akan membantu meringankan pekerjaan Kamu.</li>
                 <li><strong>Server yang Mudah Dinavigasi:</strong> Menyusun server agar mudah dinavigasi oleh anggota, dengan pengaturan channel yang jelas dan memudahkan komunikasi.</li>
             </ul>
 
-            <h3 id="kenapa-pilih" style="opacity: 0;">Kenapa Harus Memilih Jasa Tetsoe?</h3>
-            <ul class="bullet-list" id="kenapa-list" style="opacity: 0;">
+            <h3 id="kenapa-pilih">Kenapa Harus Memilih Jasa Tetsoe?</h3>
+            <ul class="bullet-list" id="kenapa-list">
                 <li><strong>Pengalaman yang Luas:</strong> Saya memiliki pengalaman lebih dari beberapa tahun dalam mengelola server Discord, baik dalam pembuatan server baru, maupun optimasi server yang sudah ada.</li>
                 <li><strong>Perbaikan Server Gratis:</strong> Saya menyediakan perbaikan server Discord secara gratis, termasuk penyempurnaan pengaturan, pembuatan channel baru, dan meningkatkan pengalaman pengguna tanpa perlu biaya.</li>
                 <li><strong>Revisi Tanpa Batas:</strong> Saya memberikan revisi tanpa batas untuk memastikan server Kamu sesuai dengan keinginan dan kebutuhan komunitas. Setiap perubahan dapat dilakukan tanpa ada batasan waktu.</li>
             </ul>
 
-            <h3 id="moto" style="opacity: 0;">Moto Saya</h3>
-            <p id="moto-text" style="opacity: 0;">"Saya tidak pernah meragukan pelanggan, meski permintaannya aneh-aneh, selagi saya bisa dan mampu, akan saya lakukan."</p>
+            <h3 id="moto">Moto Saya</h3>
+            <p id="moto-text">"Saya tidak pernah meragukan pelanggan, meski permintaannya aneh-aneh, selagi saya bisa dan mampu, akan saya lakukan."</p>
 
-            <h3 id="keahlian" style="opacity: 0;">Keahlian Saya</h3>
-            <ul class="bullet-list" id="keahlian-list" style="opacity: 0;">
+            <h3 id="keahlian">Keahlian Saya</h3>
+            <ul class="bullet-list" id="keahlian-list">
                 <li><strong>Pembuatan dan Pengelolaan Server Discord:</strong> Merancang dan membangun server Discord dari awal sesuai dengan kebutuhan dan tujuan komunitas kamu.</li>
                 <li><strong>Pengelolaan Roles & Permissions:</strong> Menyusun roles dan permissions yang tepat, memastikan sistem berjalan lancar dan aman.</li>
                 <li><strong>Automasi & Integrasi Bot:</strong> Mengintegrasikan bot untuk mengotomatisasi tugas-tugas dan meningkatkan pengalaman pengguna.</li>
                 <li><strong>Custom Bot Discord:</strong> Meski kini tidak aktif membuatnya, saya punya pengalaman dalam membuat custom bot untuk moderasi, automasi, dan penyesuaian fungsi server.</li>
             </ul>
 
-            <h3 id="pengalaman" style="opacity: 0;">Pengalaman Saya</h3>
-            <p id="pengalaman-text" style="opacity: 0;">Saya telah mengelola server Discord untuk berbagai komunitas besar dan kecil, termasuk server dengan lebih dari 10 ribu anggota. Selain itu, saya juga berpengalaman sebagai moderator dan staf di berbagai server, sehingga memahami betul pentingnya perencanaan yang baik dan pengelolaan server yang optimal.</p>
+            <h3 id="pengalaman">Pengalaman Saya</h3>
+            <p id="pengalaman-text">Saya telah mengelola server Discord untuk berbagai komunitas besar dan kecil, termasuk server dengan lebih dari 10 ribu anggota. Selain itu, saya juga berpengalaman sebagai moderator dan staf di berbagai server, sehingga memahami betul pentingnya perencanaan yang baik dan pengelolaan server yang optimal.</p>
 
-            <h3 id="contoh" style="opacity: 0;">Contoh Server Discord</h3>
-            <p id="contoh-text" style="opacity: 0;">Jika kamu ingin melihat contoh server yang telah saya buat dan kelola, silakan hubungi saya.</p>
+            <h3 id="contoh">Contoh Server Discord</h3>
+            <p id="contoh-text">Jika kamu ingin melihat contoh server yang telah saya buat dan kelola, silakan hubungi saya.</p>
 
-            <div class="example-images" id="gambar-contoh" style="opacity: 0;">
+            <div class="example-images" id="gambar-contoh">
                 <img src="https://via.placeholder.com/300x150?text=Server+Discord+1" alt="Contoh Server Discord 1">
                 <img src="https://via.placeholder.com/300x150?text=Server+Discord+2" alt="Contoh Server Discord 2">
                 <img src="https://via.placeholder.com/300x150?text=Server+Discord+3" alt="Contoh Server Discord 3">
             </div>
 
-            <h3 id="harga" style="opacity: 0;">Harga</h3>
-            <p id="harga-text" style="opacity: 0;">Gratis! Saya menawarkan jasa secara gratis selama tidak ada persyaratan khusus dan masih dalam kondisi fleksibel. Tidak ada kewajiban pembayaran.</p>
+            <h3 id="harga">Harga</h3>
+            <p id="harga-text">Gratis! Saya menawarkan jasa secara gratis selama tidak ada persyaratan khusus dan masih dalam kondisi fleksibel. Tidak ada kewajiban pembayaran.</p>
 
-            <h3 id="hubungi" style="opacity: 0;">Hubungi Saya</h3>
-            <p id="hubungi-text" style="opacity: 0;">Jika kamu membutuhkan bantuan dalam pembuatan server Discord, optimasi server, atau setup bots, saya siap membantu! Jangan ragu untuk menghubungi saya, dan kita bisa diskusikan lebih lanjut mengenai kebutuhan server komunitas kamu.</p>
+            <h3 id="hubungi">Hubungi Saya</h3>
+            <p id="hubungi-text">Jika kamu membutuhkan bantuan dalam pembuatan server Discord, optimasi server, atau setup bots, saya siap membantu! Jangan ragu untuk menghubungi saya, dan kita bisa diskusikan lebih lanjut mengenai kebutuhan server komunitas kamu.</p>
 
-            <div class="contact-buttons" style="opacity: 0;">
+            <div class="contact-buttons">
                 <a href="mailto:email@example.com" class="cta">Hubungi via Email</a>
                 <a href="https://discord.com/users/123456789" class="cta">Hubungi via Discord</a>
             </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const typingElement = document.getElementById("judul-pertama");
-            const text = typingElement.textContent;
-            typingElement.textContent = '';
-            
-            let index = 0;
-            let interval = setInterval(function() {
-                typingElement.textContent += text[index];
-                index++;
-                if (index === text.length) {
-                    clearInterval(interval);
-                    document.querySelectorAll('h3, p, .bullet-list').forEach(function(element) {
-                        element.style.opacity = 1;
-                    });
-                    document.getElementById("gambar-contoh").style.opacity = 1;
-                }
-            }, 100);
-        });
-    </script>
 </body>
 </html>
