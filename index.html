@@ -12,6 +12,8 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            position: relative; /* Agar bintang jatuh terletak di atas body */
+            overflow: hidden; /* Menyembunyikan bintang yang keluar dari layar */
         }
 
         h1 {
@@ -83,6 +85,7 @@
             background-color: white;
             animation: falling-stars 5s infinite;
             animation-timing-function: linear;
+            z-index: -1; /* Agar bintang tidak menutupi teks */
         }
 
         /* Penataan untuk gambar */
@@ -150,12 +153,13 @@
 
     <!-- Efek Bintang Jatuh -->
     <script>
-        // Membuat efek bintang jatuh
+        // Membuat efek bintang jatuh di seluruh layar
         for (let i = 0; i < 100; i++) {
             let star = document.createElement('div');
             star.classList.add('falling-star');
-            star.style.left = `${Math.random() * 100}vw`;
-            star.style.animationDuration = `${Math.random() * 3 + 3}s`;
+            star.style.left = `${Math.random() * 100}vw`; // Muncul di seluruh layar
+            star.style.animationDuration = `${Math.random() * 3 + 3}s`; // Kecepatan jatuh acak
+            star.style.animationDelay = `${Math.random() * 5}s`; // Menunda agar efek terlihat acak
             document.body.appendChild(star);
         }
     </script>
