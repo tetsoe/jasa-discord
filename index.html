@@ -193,13 +193,11 @@
         // Fungsi untuk memunculkan konten setelah animasi mengetik selesai
         window.onload = function () {
             setTimeout(function () {
-                document.getElementById('sub-heading').classList.add('show-content');
-                document.getElementById('content1').classList.add('show-content');
-                document.getElementById('section1').classList.add('show-content');
-                document.getElementById('section2').classList.add('show-content');
-                document.getElementById('motto').classList.add('show-content');
-                document.getElementById('skills').classList.add('show-content');
-                document.getElementById('experience').classList.add('show-content');
+                // Menambahkan kelas 'show-content' ke seluruh konten setelah efek mengetik selesai
+                let elements = document.querySelectorAll('h1, p, h2, ul, .cta');
+                elements.forEach(function (el) {
+                    el.classList.add('show-content');
+                });
             }, 4000); // Delay 4 detik setelah judul selesai
         };
     </script>
