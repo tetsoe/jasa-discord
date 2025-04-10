@@ -1,141 +1,168 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jasa Setup Discord Tetsoe</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: black;
-      color: white;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      overflow-x: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Pembuatan Server Discord</title>
+    <style>
+        body {
+            background-image: url('https://example.com/night-sky.jpg'); /* Ganti dengan URL gambar latar belakang langit malam */
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-    h1 {
-      font-size: 2em;
-      margin-top: 20px;
-    }
+        h1, h2, h3, p {
+            margin: 10px;
+        }
 
-    p {
-      margin: 8px 0;
-    }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Memberikan transparansi agar teks lebih jelas */
+            border-radius: 10px;
+        }
 
-    .section {
-      max-width: 600px;
-      margin: 20px 0;
-    }
+        h1 {
+            font-size: 3em;
+            text-align: center;
+        }
 
-    ul {
-      list-style: disc;
-      padding-left: 1.2em;
-      text-align: left;
-    }
+        h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-top: 30px;
+        }
 
-    .button-container {
-      margin-top: 20px;
-    }
+        .cta {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            text-decoration: none;
+            background-color: #003366; /* Biru tua */
+            color: white;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
 
-    .button {
-      background-color: #007BFF;
-      color: white;
-      padding: 10px 18px;
-      margin: 5px;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 1em;
-      display: inline-block;
-    }
+        .cta:hover {
+            background-color: #005599; /* Biru muda saat hover */
+        }
 
-    .stars {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
-    }
+        .contact {
+            text-align: center;
+            margin-top: 50px;
+        }
 
-    .star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: white;
-      animation: fall linear infinite;
-    }
+        .contact h2 {
+            font-size: 2em;
+        }
 
-    @keyframes fall {
-      0% {
-        transform: translateY(-10px);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh);
-        opacity: 0;
-      }
-    }
-  </style>
+        .contact-buttons {
+            margin-top: 20px;
+        }
+
+        .bullet-list {
+            list-style-type: disc;
+            margin-left: 30px;
+        }
+
+        .bullet-list li {
+            margin-bottom: 10px;
+        }
+
+        /* Efek bintang jatuh */
+        @keyframes falling-stars {
+            0% { top: -10px; opacity: 0.5; }
+            100% { top: 100vh; opacity: 0; }
+        }
+
+        .falling-star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: white;
+            animation: falling-stars 5s infinite;
+            animation-timing-function: linear;
+        }
+
+        /* Penataan untuk gambar */
+        .server-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <div class="stars" id="stars"></div>
+    <div class="container">
+        <h1>Jasa Discord</h1>
+        <p>Tetsoe lagi buka jasa nih!</p>
+        <p>Jika Kamu membutuhkan pembuatan server Discord yang efisien, jasa ini adalah pilihan yang tepat. Saya siap membantu Kamu membuat server Discord yang terkelola dengan baik dan sesuai dengan kebutuhan komunitas Kamu. Silakan hubungi saya untuk konsultasi lebih lanjut.</p>
 
-  <div class="section">
-    <h1>Jasa Setup Server Discord Tetsoe</h1>
-    <p>Halo Tetsoe lagi buka jasa nih!</p>
-    <p>Buat yang pengen bikin server tapi ga ngerti cara setting pemission, setup bot dan lain-lain dari pada bingung mending pakai jasa setup / bikin server Discord Tetsoe dibuat dengan tampilan profesional, rapi, informatif, dan juga fungsional.</p>
+        <h2>Apa yang Saya Tawarkan</h2>
+        <ul class="bullet-list">
+            <li><strong>Server Discord yang Dibuat dengan Baik:</strong> Mendapatkan server Discord yang rapi, terstruktur dengan baik, dan mudah dikelola.</li>
+            <li><strong>Pengaturan Roles dan Permissions yang Tepat:</strong> Semua anggota server akan mendapatkan akses sesuai dengan peran mereka.</li>
+            <li><strong>Automasi dan Bot yang Efisien:</strong> Bot yang digunakan untuk moderasi dan tugas otomatis akan membantu meringankan pekerjaan Kamu.</li>
+            <li><strong>Server yang Mudah Dinavigasi:</strong> Menyusun server agar mudah dinavigasi oleh anggota, dengan pengaturan channel yang jelas dan memudahkan komunikasi.</li>
+        </ul>
 
-    
-    <h3>Apa aja sih yang kamu dapatkan?</h3>
-    <ul>
-      <li>Struktur channel & kategori rapi dan efisien.</li>
-      <li>Pengaturan role & permission sesuai kebutuhan.</li>
-      <li>Setup fitur bot (moderasi, logging, utility, notifikasi, dll).</li>
-      <li>Desain UI server yang rapi dan fungsional.</li>
-      <li>Onboarding untuk sambutan member baru.</li>
-      <li>Logging (modlog, join/leave, edit/delete, dsb).</li>
-      <li>Integrasi otomatis notifikasi YouTube & Twitch.</li>
-      <li>Servernya siap pakai deh pokoknya.</li>
-    </ul>
+        <h2>Kenapa Harus Memilih Jasa Tetsoe?</h2>
+        <ul class="bullet-list">
+            <li><strong>Pengalaman yang Luas:</strong> Saya memiliki pengalaman lebih dari beberapa tahun dalam mengelola server Discord, baik dalam pembuatan server baru, maupun optimasi server yang sudah ada.</li>
+            <li><strong>Perbaikan Server Gratis:</strong> Saya menyediakan perbaikan server Discord secara gratis, termasuk penyempurnaan pengaturan, pembuatan channel baru, dan meningkatkan pengalaman pengguna tanpa perlu biaya.</li>
+            <li><strong>Revisi Tanpa Batas:</strong> Saya memberikan revisi tanpa batas untuk memastikan server Kamu sesuai dengan keinginan dan kebutuhan komunitas. Setiap perubahan dapat dilakukan tanpa ada batasan waktu.</li>
+        </ul>
 
-    
-    <h3>Kenapa harus pilih jasa Tetsoe?</h3>
-    <ul>
-      <li>Revisi tak terbatas.</li>
-      <li>Gratis perbaikan jika ada error atau masalah sewaktu-waktu.</li>
-      <li>Tampilan akhir nyaman dilihat dan mudah dinavigasi.</li>
-      <li>Pengerjaan tergantung jam kerja di real life (biasanya sih selesai dalam 1 hari).</li>
-    </ul>
+        <h2>Moto Saya</h2>
+        <p>"Saya tidak pernah meragukan pelanggan, meski permintaannya aneh-aneh, selagi saya bisa dan mampu, akan saya lakukan."</p>
 
-    
-    <h4>Harga? seikhlasnya aja, niat bantu bukan jualan.</h3>
-    
-    <h4>Tertarik? Bisa tanya-tanya dulu kok lewat tombol di bawah ini.</h4>
+        <h2>Keahlian Saya:</h2>
+        <ul class="bullet-list">
+            <li><strong>Pembuatan dan Pengelolaan Server Discord:</strong> Merancang dan membangun server Discord dari awal sesuai dengan kebutuhan dan tujuan komunitas, serta penyesuaian lanjutan untuk meningkatkan keterlibatan dan efisiensi.</li>
+            <li><strong>Pengelolaan Roles & Permissions:</strong> Menentukan peran dan izin yang tepat untuk anggota komunitas, memastikan bahwa sistem berjalan dengan lancar dan aman bagi setiap pengguna.</li>
+            <li><strong>Automasi & Integrasi Bot:</strong> Menyiapkan sistem automasi menggunakan bot dan API untuk meningkatkan pengelolaan server dan memberikan pengalaman pengguna yang lebih baik, serta mengurangi pekerjaan manual.</li>
+            <li><strong>Custom Bot Discord:</strong> Meskipun sudah tidak aktif membuatnya, saya memiliki pengalaman dalam pembuatan custom bot Discord yang dapat membantu dalam moderasi, automasi tugas, dan penyesuaian fungsi server sesuai kebutuhan komunitas.</li>
+        </ul>
 
-    <div class="button-container">
-      <a class="button" href="mailto:tetsuyasfx@gmail.com">Hubungi via Email</a>
-      <a class="button" href="https://discord.com/users/467675821671448577" target="_blank">Hubungi via Discord</a>
+        <h2>Pengalaman Saya</h2>
+        <p>Saya juga memiliki pengalaman dalam mengelola server Discord untuk berbagai komunitas kecil maupun besar, termasuk pengalaman sebagai moderator di berbagai server, seperti server dengan lebih dari 10 ribu anggota. Selain itu, saya juga pernah menjadi staff di berbagai server Discord, yang memperkaya pemahaman saya tentang koordinasi dan pengelolaan tim, serta memperbaiki kinerja server komunitas. Dengan pengalaman tersebut, saya memahami pentingnya perencanaan yang baik, kenyamanan server, serta optimasi pengelolaan server untuk keberlanjutan komunitas.</p>
+
+        <h2>Contoh Server Discord</h2>
+        <img src="server-example1.jpg" alt="Contoh Server 1" class="server-image">
+        <img src="server-example2.jpg" alt="Contoh Server 2" class="server-image">
+        <img src="server-example3.jpg" alt="Contoh Server 3" class="server-image">
+
+        <h2>Harga</h2>
+        <p><strong>Free</strong></p>
+        <p>Tetsoe membuka jasa secara gratis selama proses tidak terikat pada persyaratan khusus. Tetap bekerja secara fleksibel, tanpa kewajiban pembayaran.</p>
+
+        <section class="contact">
+            <h2>Hubungi Saya</h2>
+            <p>Jika Kamu membutuhkan bantuan dalam pembuatan server Discord, optimasi server, atau setup bots, saya siap membantu! Jangan ragu untuk menghubungi saya dan kita bisa diskusikan kebutuhan server komunitas Kamu lebih lanjut.</p>
+            <div class="contact-buttons">
+                <a href="mailto:tetsoe@email.com" class="cta">Hubungi via Email</a>
+                <a href="https://discord.com/users/discord-id" class="cta" target="_blank">Hubungi via Discord</a>
+            </div>
+        </section>
     </div>
-  </div>
 
-  <script>
-    const starContainer = document.getElementById('stars');
-    for (let i = 0; i < 100; i++) {
-      const star = document.createElement('div');
-      star.className = 'star';
-      star.style.left = Math.random() * 100 + 'vw';
-      star.style.top = -Math.random() * 100 + 'px';
-      star.style.animationDuration = (Math.random() * 3 + 2) + 's';
-      star.style.animationDelay = Math.random() * 5 + 's';
-      starContainer.appendChild(star);
-    }
-  </script>
+    <!-- Efek Bintang Jatuh -->
+    <script>
+        // Membuat efek bintang jatuh
+        for (let i = 0; i < 100; i++) {
+            let star = document.createElement('div');
+            star.classList.add('falling-star');
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.animationDuration = `${Math.random() * 3 + 3}s`;
+            document.body.appendChild(star);
+        }
+    </script>
 </body>
 </html>
