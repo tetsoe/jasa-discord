@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jasa Setup Server Discord - Tetsoe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f0f0f0;
+      overflow-x: hidden;
+      background: #0e0e0e;
+    }
+
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      animation: moveStar linear infinite;
+    }
+
+    @keyframes moveStar {
+      0% {
+        transform: translateY(-100px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+    .content {
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1, .cta {
+      font-size: 28px;
+      min-height: 40px;
+    }
+
+    p, li {
+      line-height: 1.7;
+    }
+
+    ul {
+      text-align: left;
+      margin: 20px auto;
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    ul.fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 20px 10px;
+      background-color: #111;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #444;
+      box-shadow: 0 0 10px #888;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    .typing {
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards;
+    }
+  </style>
+</head>
+<body>
+  <div class="background" id="background"></div>
+  <div class="content">
+    <h1 class="typing" id="mainText">Jasa Setup Server Discord oleh Tetsoe</h1>
+    <p class="cta" id="typingText"></p>
+
+    <ul id="featureList">
+      <li>Struktur channel & kategori rapi dan efisien</li>
+      <li>Pengaturan role & permission sesuai kebutuhan</li>
+      <li>Setup bot: moderasi, logging, utility, mini-game, notifikasi, anti-nuke, dll</li>
+      <li>Desain UI server yang nyaman dilihat dan mudah dinavigasi</li>
+      <li>Logging: modlog, join/leave, edit/delete, dsb</li>
+      <li>Onboarding untuk sambutan member baru</li>
+      <li>Integrasi notifikasi otomatis dari YouTube & Twitch</li>
+      <li>Bisa disesuaikan dengan kebutuhan spesifik</li>
+    </ul>
+
+    <p><strong>Kenapa pilih jasa Tetsoe?</strong></p>
+    <ul id="whyList">
+      <li>Revisi tak terbatas</li>
+      <li>Gratis perbaikan jika ada error atau masalah sewaktu-waktu</li>
+      <li>Tampilan clean, nyaman dilihat, mudah dinavigasi</li>
+      <li>Pengerjaan tergantung jam kerja di real life juga, tapi pasti selesai dalam 1 hari</li>
+    </ul>
+
+    <p class="cta" id="typingCTA"></p>
+    <a href="mailto:tetsuyasfx@gmail.com" class="button" target="_blank">Email</a>
+    <a href="https://discord.com/users/467675821671448577" class="button" target="_blank">Discord</a>
+  </div>
+
+  <script>
+    // Bintang jatuh
+    const bg = document.getElementById('background');
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.top = Math.random() * -100 + 'px';
+      star.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      bg.appendChild(star);
+    }
+
+    // Efek ketikan pada CTA
+    const typingText = "Tertarik? Langsung hubungi lewat tombol di bawah ini.";
+    const typingCTA = document.getElementById("typingCTA");
+    let i = 0;
+    function typeEffect() {
+      if (i < typingText.length) {
+        typingCTA.innerHTML += typingText.charAt(i);
+        i++;
+        setTimeout(typeEffect, 50);
+      }
+    }
+    setTimeout(typeEffect, 4500); // Mulai setelah header selesai
+
+    // Fade-in saat scroll
+    window.addEventListener('scroll', () => {
+      const features = document.getElementById('featureList');
+      const why = document.getElementById('whyList');
+      const showPoint = window.innerHeight - 100;
+
+      [features, why].forEach(list => {
+        const top = list.getBoundingClientRect().top;
+        if (top < showPoint) {
+          list.classList.add('fade-in');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
