@@ -21,27 +21,17 @@
       position: relative;
       z-index: 1;
     }
-    h1.typing, h2.typing {
-      border-right: .1em solid white;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 3s steps(40, end) forwards, blink .75s step-end infinite;
-    }
-    h2.typing {
-      animation-delay: 3.5s;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink {
-      from, to { border-color: transparent }
-      50% { border-color: white }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
     p {
-      margin-top: 1rem;
       font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.4rem;
     }
     ul {
       text-align: left;
@@ -49,6 +39,10 @@
       font-size: 1.05rem;
       line-height: 1.7;
       margin-top: 1rem;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 1rem;
     }
     .button {
       display: inline-block;
@@ -71,21 +65,36 @@
 <body>
 <canvas id="stars"></canvas>
 <div class="container">
-  <h1 class="typing">Jasa Setup Server Discord Tetsoe</h1>
+  <h1>Jasa Setup Server Discord Tetsoe</h1>
   <p>Buka jasa setup / bikin server Discord dengan tampilan profesional, rapi, informatif, dan fungsional.</p>
 
-  <h2 class="typing">Apa yang Kamu Dapatkan:</h2>
+  <h2>Apa yang Kamu Dapatkan:</h2>
   <ul>
     <li>Struktur channel & kategori rapi dan efisien.</li>
     <li>Pengaturan role & permission sesuai kebutuhan.</li>
-    <li>Setup fitur bot (moderasi, logging, utility, notifikasi, dll).</li>
+    <li>Setup fitur bot:
+      <ul>
+        <li>Moderasi</li>
+        <li>Logging</li>
+        <li>Utility</li>
+        <li>Notifikasi</li>
+        <li>Dll</li>
+      </ul>
+    </li>
     <li>Desain UI server yang rapi dan fungsional.</li>
     <li>Onboarding untuk sambutan member baru.</li>
-    <li>Logging (modlog, join/leave, edit/delete, dsb).</li>
+    <li>Logging:
+      <ul>
+        <li>Modlog</li>
+        <li>Join/leave</li>
+        <li>Edit/delete</li>
+        <li>Dll</li>
+      </ul>
+    </li>
     <li>Integrasi otomatis notifikasi YouTube & Twitch.</li>
   </ul>
 
-  <h2 class="typing">Kenapa Pilih Jasa Tetsoe?</h2>
+  <h2>Kenapa Pilih Jasa Tetsoe?</h2>
   <ul>
     <li>Revisi tak terbatas.</li>
     <li>Gratis perbaikan jika ada error atau masalah sewaktu-waktu.</li>
