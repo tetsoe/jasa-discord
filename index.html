@@ -31,135 +31,109 @@
     h2.typing {
       animation-delay: 3.5s;
     }
-    p {
-      margin-top: 1rem;
-      font-size: 1.1rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 2rem;
-    }
-    li {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.8s forwards;
-    }
-    li:nth-child(1) { animation-delay: 5s; }
-    li:nth-child(2) { animation-delay: 5.5s; }
-    li:nth-child(3) { animation-delay: 6s; }
-    li:nth-child(4) { animation-delay: 6.5s; }
-    li:nth-child(5) { animation-delay: 7s; }
-    li:nth-child(6) { animation-delay: 7.5s; }
-    li:nth-child(7) { animation-delay: 8s; }
-    li:nth-child(8) { animation-delay: 8.5s; }
-
-    .button-group {
-      margin-top: 2rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      margin: 8px;
-      font-size: 1rem;
-      color: white;
-      background-color: #007BFF;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background-color: #0056b3;
-    }
-
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
     }
     @keyframes blink {
-      50% { border-color: transparent }
+      from, to { border-color: transparent }
+      50% { border-color: white }
     }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: none;
-      }
+    p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
     }
-
-    .stars {
+    ul {
+      text-align: left;
+      display: inline-block;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-top: 1rem;
+    }
+    .button {
+      display: inline-block;
+      margin: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    canvas {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      pointer-events: none;
       z-index: 0;
-    }
-    .star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: white;
-      animation: fall 3s linear infinite;
-    }
-    @keyframes fall {
-      to {
-        transform: translateY(100vh);
-        opacity: 0;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="stars" id="stars"></div>
-  <div class="container">
-    <h1 class="typing" id="mainText">Jasa Setup Server Discord Tetsoe</h1>
-    <p>Buka jasa setup / bikin server Discord dengan tampilan profesional, rapi, informatif, dan fungsional.</p>
+<canvas id="stars"></canvas>
+<div class="container">
+  <h1 class="typing">Jasa Setup Server Discord Tetsoe</h1>
+  <p>Buka jasa setup / bikin server Discord dengan tampilan profesional, rapi, informatif, dan fungsional.</p>
 
-    <h2 class="typing">Kenapa Pilih Jasa Tetsoe?</h2>
-    <ul>
-      <li>Revisi tak terbatas.</li>
-      <li>Gratis perbaikan jika ada error atau masalah sewaktu-waktu.</li>
-      <li>Tampilan akhir nyaman dilihat dan mudah dinavigasi.</li>
-      <li>Pengerjaan tergantung jam kerja real life (namun maksimal 1 hari selesai).</li>
-      <li>Struktur channel & kategori rapi dan efisien.</li>
-      <li>Pengaturan role & permission sesuai kebutuhan.</li>
-      <li>Setup fitur bot (moderasi, logging, utility, notifikasi, dll).</li>
-      <li>Desain UI server yang rapi dan fungsional.</li>
-    </ul>
+  <h2 class="typing">Apa yang Kamu Dapatkan:</h2>
+  <ul>
+    <li>Struktur channel & kategori rapi dan efisien.</li>
+    <li>Pengaturan role & permission sesuai kebutuhan.</li>
+    <li>Setup fitur bot (moderasi, logging, utility, notifikasi, dll).</li>
+    <li>Desain UI server yang rapi dan fungsional.</li>
+    <li>Onboarding untuk sambutan member baru.</li>
+    <li>Logging (modlog, join/leave, edit/delete, dsb).</li>
+    <li>Integrasi otomatis notifikasi YouTube & Twitch.</li>
+  </ul>
 
-    <p style="margin-top:2rem;"><strong>Harga:</strong> seikhlasnya aja</p>
-    <p style="margin-top:1rem;">Tertarik? Bisa tanya-tanya lewat tombol di bawah ini.</p>
-    <div class="button-group">
-      <a href="mailto:tetsuyasfx@gmail.com" class="btn">Email</a>
-      <a href="https://discord.com/users/467675821671448577" class="btn">Hubungi via Discord</a>
-    </div>
+  <h2 class="typing">Kenapa Pilih Jasa Tetsoe?</h2>
+  <ul>
+    <li>Revisi tak terbatas.</li>
+    <li>Gratis perbaikan jika ada error atau masalah sewaktu-waktu.</li>
+    <li>Tampilan akhir nyaman dilihat dan mudah dinavigasi.</li>
+    <li>Pengerjaan tergantung jam kerja real life (biasanya selesai dalam 1 hari).</li>
+  </ul>
 
-    <h2 class="typing">Kenapa Pilih Jasa Tetsoe?</h2>
-    <ul>
-      <li>Revisi tak terbatas.</li>
-      <li>Gratis perbaikan jika ada error atau masalah sewaktu-waktu.</li>
-      <li>Tampilan akhir nyaman dilihat dan mudah dinavigasi.</li>
-      <li>Pengerjaan tergantung jam kerja real life (namun maksimal 1 hari selesai).</li>
-      <li>Struktur channel & kategori rapi dan efisien.</li>
-      <li>Pengaturan role & permission sesuai kebutuhan.</li>
-      <li>Setup fitur bot (moderasi, logging, utility, notifikasi, dll).</li>
-      <li>Desain UI server yang rapi dan fungsional.</li>
-    </ul>
-  </div>
+  <p><strong>Harga:</strong> seikhlasnya aja</p>
+  <p><strong>Tertarik?</strong> Bisa tanya-tanya lewat tombol di bawah ini.</p>
 
-  <script>
-    const starsContainer = document.getElementById("stars");
-    for (let i = 0; i < 50; i++) {
-      let star = document.createElement("div");
-      star.classList.add("star");
-      star.style.left = Math.random() * 100 + "vw";
-      star.style.animationDuration = 1 + Math.random() * 3 + "s";
-      star.style.opacity = Math.random();
-      starsContainer.appendChild(star);
+  <a class="button" href="mailto:tetsuyasfx@gmail.com">Email</a>
+  <a class="button" href="https://discord.com/users/467675821671448577" target="_blank">Hubungi via Discord</a>
+</div>
+
+<script>
+const canvas = document.getElementById('stars');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let stars = [];
+for (let i = 0; i < 100; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 1.5,
+    d: Math.random() * 1
+  });
+}
+
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#ffffff";
+  for (let i = 0; i < stars.length; i++) {
+    let s = stars[i];
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+    ctx.fill();
+    s.y += s.d;
+    if (s.y > canvas.height) {
+      s.y = 0;
+      s.x = Math.random() * canvas.width;
     }
-  </script>
+  }
+  requestAnimationFrame(drawStars);
+}
+drawStars();
+</script>
+
 </body>
 </html>
