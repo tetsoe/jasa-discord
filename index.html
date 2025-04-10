@@ -1,114 +1,136 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Jasa Setup Server Discord Tetsoe</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: black;
-            color: white;
-            overflow-x: hidden;
-        }
-        .stars {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background: black url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/stars.png') repeat top center;
-            z-index: -1;
-            animation: moveStars 200s linear infinite;
-        }
-        @keyframes moveStars {
-            from {background-position: 0 0;}
-            to {background-position: 10000px 5000px;}
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.4em;
-            color: #00bfff;
-            margin-bottom: 10px;
-        }
-        .content {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .content p {
-            margin: 10px 0;
-        }
-        .content ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 auto 20px auto;
-            text-align: left;
-            display: inline-block;
-        }
-        .content ul li::before {
-            content: "• ";
-            color: #00bfff;
-        }
-        .button-group {
-            margin-top: 30px;
-        }
-        .button {
-            display: inline-block;
-            padding: 12px 20px;
-            margin: 10px 10px 0 0;
-            background-color: #00bfff;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-        .button:hover {
-            background-color: #0099cc;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jasa Setup Discord Tetsoe</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-top: 20px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    .section {
+      max-width: 600px;
+      margin: 20px 0;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 1.2em;
+      text-align: left;
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 18px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1em;
+      display: inline-block;
+    }
+
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="stars" id="stars"></div>
 
-<div class="stars"></div>
-
-<div class="container">
+  <div class="section">
     <h1>Jasa Setup Server Discord Tetsoe</h1>
-    <p>Halo Tetsoe lagi buka jasa nih<br>
-    Jasa setup / bikin server Discord dengan tampilan profesional, rapi, informatif, dan juga fungsional.</p>
+    <p>Halo Tetsoe lagi buka jasa nih</p>
+    <p>Jasa setup / bikin server Discord dengan tampilan profesional, rapi, informatif, dan juga fungsional.</p>
 
-    <div class="content">
-        <p>Apa aja sih yang Kamu Dapatkan?</p>
-        <ul>
-            <li>Struktur channel & kategori rapi dan efisien.</li>
-            <li>Pengaturan role & permission sesuai kebutuhan.</li>
-            <li>Setup fitur bot (moderasi, logging, utility, notifikasi, dll).</li>
-            <li>Desain UI server yang rapi dan fungsional.</li>
-            <li>Onboarding untuk sambutan member baru.</li>
-            <li>Logging (modlog, join/leave, edit/delete, dsb).</li>
-            <li>Integrasi otomatis notifikasi YouTube & Twitch.</li>
-        </ul>
+    <h3>Apa aja sih yang Kamu Dapatkan?</h3>
+    <ul>
+      <li>Struktur channel & kategori rapi dan efisien.</li>
+      <li>Pengaturan role & permission sesuai kebutuhan.</li>
+      <li>Setup fitur bot (moderasi, logging, utility, notifikasi, dll).</li>
+      <li>Desain UI server yang rapi dan fungsional.</li>
+      <li>Onboarding untuk sambutan member baru.</li>
+      <li>Logging (modlog, join/leave, edit/delete, dsb).</li>
+      <li>Integrasi otomatis notifikasi YouTube & Twitch.</li>
+    </ul>
 
-        <p>Kenapa Harus Pilih Jasa Tetsoe?</p>
-        <ul>
-            <li>Revisi tak terbatas.</li>
-            <li>Gratis perbaikan jika ada error atau masalah sewaktu-waktu.</li>
-            <li>Tampilan akhir nyaman dilihat dan mudah dinavigasi.</li>
-            <li>Pengerjaan tergantung jam kerja real life (biasanya selesai dalam 1 hari).</li>
-        </ul>
+    <h3>Kenapa Harus Pilih Jasa Tetsoe?</h3>
+    <ul>
+      <li>Revisi tak terbatas.</li>
+      <li>Gratis perbaikan jika ada error atau masalah sewaktu-waktu.</li>
+      <li>Tampilan akhir nyaman dilihat dan mudah dinavigasi.</li>
+      <li>Pengerjaan tergantung jam kerja real life (biasanya selesai dalam 1 hari).</li>
+    </ul>
 
-        <p>Harga? seikhlasnya aja</p>
-        <p>tertarik? bisa tanya-tanya lewat tombol di bawah ini.</p>
+    <p>Harga? seikhlasnya aja</p>
+    <p>Tertarik? Bisa tanya-tanya lewat tombol di bawah ini.</p>
 
-        <div class="button-group">
-            <a href="mailto:tetsuyasfx@gmail.com" class="button">Hubungi via Email</a>
-            <a href="https://discord.com/users/467675821671448577" class="button">Hubungi via Discord</a>
-        </div>
+    <div class="button-container">
+      <a class="button" href="mailto:tetsuyasfx@gmail.com">Hubungi via Email</a>
+      <a class="button" href="https://discord.com/users/467675821671448577" target="_blank">Hubungi via Discord</a>
     </div>
-</div>
+  </div>
 
+  <script>
+    const starContainer = document.getElementById('stars');
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.top = -Math.random() * 100 + 'px';
+      star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      star.style.animationDelay = Math.random() * 5 + 's';
+      starContainer.appendChild(star);
+    }
+  </script>
 </body>
 </html>
