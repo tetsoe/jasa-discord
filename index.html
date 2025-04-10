@@ -3,173 +3,163 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jasa Setup Server Discord - Tetsoe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jasa Discord Tetsoe</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: #f0f0f0;
+      background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+      color: white;
       overflow-x: hidden;
-      background: #0e0e0e;
     }
-
-    .background {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      overflow: hidden;
-      z-index: -1;
-    }
-
-    .star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: white;
-      animation: moveStar linear infinite;
-    }
-
-    @keyframes moveStar {
-      0% {
-        transform: translateY(-100px);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh);
-        opacity: 0;
-      }
-    }
-
-    .content {
-      text-align: center;
-      padding: 60px 20px;
+    .container {
       max-width: 800px;
       margin: auto;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
     }
-
-    h1, .cta {
-      font-size: 28px;
-      min-height: 40px;
+    h1.typing, h2.typing {
+      border-right: .1em solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(40, end) forwards, blink .75s step-end infinite;
     }
-
-    p, li {
-      line-height: 1.7;
+    h2.typing {
+      animation-delay: 3.5s;
     }
-
+    p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
     ul {
-      text-align: left;
-      margin: 20px auto;
-      display: inline-block;
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+    }
+    li {
       opacity: 0;
       transform: translateY(20px);
-      transition: all 0.8s ease;
+      animation: fadeInUp 0.8s forwards;
     }
+    li:nth-child(1) { animation-delay: 5s; }
+    li:nth-child(2) { animation-delay: 5.5s; }
+    li:nth-child(3) { animation-delay: 6s; }
+    li:nth-child(4) { animation-delay: 6.5s; }
+    li:nth-child(5) { animation-delay: 7s; }
+    li:nth-child(6) { animation-delay: 7.5s; }
+    li:nth-child(7) { animation-delay: 8s; }
+    li:nth-child(8) { animation-delay: 8.5s; }
 
-    ul.fade-in {
-      opacity: 1;
-      transform: translateY(0);
+    .button-group {
+      margin-top: 2rem;
     }
-
-    .button {
+    .btn {
       display: inline-block;
       padding: 12px 24px;
-      margin: 20px 10px;
-      background-color: #111;
+      margin: 8px;
+      font-size: 1rem;
       color: white;
-      border-radius: 8px;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+      transition: background 0.3s;
     }
-
-    .button:hover {
-      background-color: #444;
-      box-shadow: 0 0 10px #888;
+    .btn:hover {
+      background-color: #0056b3;
     }
 
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
     }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
 
-    .typing {
-      border-right: 2px solid #fff;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 4s steps(40, end) forwards;
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      animation: fall 3s linear infinite;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="background" id="background"></div>
-  <div class="content">
-    <h1 class="typing" id="mainText">Jasa Setup Server Discord oleh Tetsoe</h1>
-    <p class="cta" id="typingText"></p>
+  <div class="stars" id="stars"></div>
+  <div class="container">
+    <h1 class="typing" id="mainText">Jasa Setup Server Discord Tetsoe</h1>
+    <p>Buka jasa setup / bikin server Discord dengan tampilan profesional, rapi, informatif, dan fungsional.</p>
 
-    <ul id="featureList">
-      <li>Struktur channel & kategori rapi dan efisien</li>
-      <li>Pengaturan role & permission sesuai kebutuhan</li>
-      <li>Setup bot: moderasi, logging, utility, mini-game, notifikasi, anti-nuke, dll</li>
-      <li>Desain UI server yang nyaman dilihat dan mudah dinavigasi</li>
-      <li>Logging: modlog, join/leave, edit/delete, dsb</li>
-      <li>Onboarding untuk sambutan member baru</li>
-      <li>Integrasi notifikasi otomatis dari YouTube & Twitch</li>
-      <li>Bisa disesuaikan dengan kebutuhan spesifik</li>
+    <h2 class="typing">Kenapa Pilih Jasa Tetsoe?</h2>
+    <ul>
+      <li>Revisi tak terbatas.</li>
+      <li>Gratis perbaikan jika ada error atau masalah sewaktu-waktu.</li>
+      <li>Tampilan akhir nyaman dilihat dan mudah dinavigasi.</li>
+      <li>Pengerjaan tergantung jam kerja real life (namun maksimal 1 hari selesai).</li>
+      <li>Struktur channel & kategori rapi dan efisien.</li>
+      <li>Pengaturan role & permission sesuai kebutuhan.</li>
+      <li>Setup fitur bot (moderasi, logging, utility, notifikasi, dll).</li>
+      <li>Desain UI server yang rapi dan fungsional.</li>
     </ul>
 
-    <p><strong>Kenapa pilih jasa Tetsoe?</strong></p>
-    <ul id="whyList">
-      <li>Revisi tak terbatas</li>
-      <li>Gratis perbaikan jika ada error atau masalah sewaktu-waktu</li>
-      <li>Tampilan clean, nyaman dilihat, mudah dinavigasi</li>
-      <li>Pengerjaan tergantung jam kerja di real life juga, tapi pasti selesai dalam 1 hari</li>
-    </ul>
+    <p style="margin-top:2rem;"><strong>Harga:</strong> seikhlasnya aja</p>
+    <p style="margin-top:1rem;">Tertarik? Bisa tanya-tanya lewat tombol di bawah ini.</p>
+    <div class="button-group">
+      <a href="mailto:tetsuyasfx@gmail.com" class="btn">Email</a>
+      <a href="https://discord.com/users/467675821671448577" class="btn">Hubungi via Discord</a>
+    </div>
 
-    <p class="cta" id="typingCTA"></p>
-    <a href="mailto:tetsuyasfx@gmail.com" class="button" target="_blank">Email</a>
-    <a href="https://discord.com/users/467675821671448577" class="button" target="_blank">Discord</a>
+    <h2 class="typing">Kenapa Pilih Jasa Tetsoe?</h2>
+    <ul>
+      <li>Revisi tak terbatas.</li>
+      <li>Gratis perbaikan jika ada error atau masalah sewaktu-waktu.</li>
+      <li>Tampilan akhir nyaman dilihat dan mudah dinavigasi.</li>
+      <li>Pengerjaan tergantung jam kerja real life (namun maksimal 1 hari selesai).</li>
+      <li>Struktur channel & kategori rapi dan efisien.</li>
+      <li>Pengaturan role & permission sesuai kebutuhan.</li>
+      <li>Setup fitur bot (moderasi, logging, utility, notifikasi, dll).</li>
+      <li>Desain UI server yang rapi dan fungsional.</li>
+    </ul>
   </div>
 
   <script>
-    // Bintang jatuh
-    const bg = document.getElementById('background');
-    for (let i = 0; i < 100; i++) {
-      const star = document.createElement('div');
-      star.className = 'star';
-      star.style.left = Math.random() * 100 + 'vw';
-      star.style.top = Math.random() * -100 + 'px';
-      star.style.animationDuration = (Math.random() * 5 + 5) + 's';
-      bg.appendChild(star);
+    const starsContainer = document.getElementById("stars");
+    for (let i = 0; i < 50; i++) {
+      let star = document.createElement("div");
+      star.classList.add("star");
+      star.style.left = Math.random() * 100 + "vw";
+      star.style.animationDuration = 1 + Math.random() * 3 + "s";
+      star.style.opacity = Math.random();
+      starsContainer.appendChild(star);
     }
-
-    // Efek ketikan pada CTA
-    const typingText = "Tertarik? Langsung hubungi lewat tombol di bawah ini.";
-    const typingCTA = document.getElementById("typingCTA");
-    let i = 0;
-    function typeEffect() {
-      if (i < typingText.length) {
-        typingCTA.innerHTML += typingText.charAt(i);
-        i++;
-        setTimeout(typeEffect, 50);
-      }
-    }
-    setTimeout(typeEffect, 4500); // Mulai setelah header selesai
-
-    // Fade-in saat scroll
-    window.addEventListener('scroll', () => {
-      const features = document.getElementById('featureList');
-      const why = document.getElementById('whyList');
-      const showPoint = window.innerHeight - 100;
-
-      [features, why].forEach(list => {
-        const top = list.getBoundingClientRect().top;
-        if (top < showPoint) {
-          list.classList.add('fade-in');
-        }
-      });
-    });
   </script>
 </body>
 </html>
